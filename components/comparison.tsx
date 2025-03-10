@@ -46,25 +46,13 @@ export default function Comparison() {
           </p>
         </div>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
-          className="overflow-x-auto"
-        >
+        <div className="overflow-hidden">
           <table className="w-full border-collapse">
             <thead>
               <motion.tr
-                variants={{
-                  hidden: { opacity: 0, y: -20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 className="bg-transparent border-b border-border"
               >
                 <th className="px-6 py-3 text-left text-sm font-semibold">Feature</th>
@@ -77,21 +65,31 @@ export default function Comparison() {
               {features.map((feature, index) => (
                 <motion.tr
                   key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: -20 },
-                    visible: { opacity: 1, y: 0 },
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    delay: index * 0.1,
+                    ease: "easeOut" 
                   }}
+                  viewport={{ once: true }}
                   className="border-b border-border"
                 >
                   <td className="px-6 py-4 text-sm font-medium">{feature.name}</td>
-                  <td className="px-6 py-4 text-center bg-muted/30">{renderStatus(feature.flirtAgent)}</td>
-                  <td className="px-6 py-4 text-center">{renderStatus(feature.others)}</td>
-                  <td className="px-6 py-4 text-center">{renderStatus(feature.human)}</td>
+                  <td className="px-6 py-4 text-center bg-muted/30">
+                    <div className="flex justify-center items-center">{renderStatus(feature.flirtAgent)}</div>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <div className="flex justify-center items-center">{renderStatus(feature.others)}</div>
+                  </td>
+                  <td className="px-6 py-4 text-center">
+                    <div className="flex justify-center items-center">{renderStatus(feature.human)}</div>
+                  </td>
                 </motion.tr>
               ))}
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground">
@@ -113,4 +111,3 @@ export default function Comparison() {
     </section>
   )
 }
-
