@@ -11,7 +11,7 @@ export default function Faq() {
     },
     {
       question: "Does It Operate Autonomously?",
-      answer: "Yes. FlirtAgent self-validates and optimizes with minimal oversight.",
+      answer: "Yes. FlirtAgent self-validates and optimizes itself.",
     },
     {
       question: "Which Languages Are Supported?",
@@ -35,7 +35,7 @@ export default function Faq() {
     },
     {
       question: "How Is Overall Pricing Calculated?",
-      answer: "We use AI token consumption. Costs vary depending on data complexity (e.g., images/videos vs. text).",
+      answer: "We use AI token consumption. Costs vary depending on data complexity (e.g., images/videos/audio vs. text).",
     },
     {
       question: "How Does FlirtAgent Choose Optimal Media?",
@@ -43,7 +43,7 @@ export default function Faq() {
     },
     {
       question: "Does It Retain Conversation History?",
-      answer: "Yes. We store up to 4000 messages locally and expand via knowladgebase as needed.",
+      answer: "Yes. We store up to 4000 messages in the Agent Kontext and expand via knowladgebase as needed.",
     },
     {
       question: "What Is the Usual Response Time?",
