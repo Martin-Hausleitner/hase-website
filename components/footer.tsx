@@ -66,17 +66,17 @@ export default function Footer() {
               <h3 className="text-sm font-medium">Legal</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href="/cookie-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     Cookie Policy
                   </Link>
                 </li>
@@ -95,4 +95,3 @@ export default function Footer() {
     </footer>
   )
 }
-
