@@ -1,0 +1,77 @@
+"use client"
+import { useState } from "react"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
+import RequestDemoDialog from "@/components/request-demo-dialog"
+import ChatDemo from "@/components/chat-demo"
+
+export default function Hero() {
+  const [isAccessOpen, setIsAccessOpen] = useState(false)
+
+  const handleRequestAccess = () => {
+    setIsAccessOpen(true)
+  }
+
+  return (
+    <section className="py-20 md:py-28">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
+          <motion.div
+            className="space-y-4 pt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.3 }}
+            >
+              <Badge variant="secondary" className="mb-2 bg-muted/50 text-muted-foreground">
+                Alpha Release
+              </Badge>
+            </motion.div>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl">
+              Fully Autonomous AI Agent That <span className="text-primary">Replaces Human Chatters</span>
+            </h1>
+            <motion.p
+              className="text-muted-foreground md:text-xl max-w-[600px]"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              Say goodbye to human chatters. FlirtAgent autonomously manages all fan interactions, delivering flirty,
+              revenue-boosting chats 24/7.
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-3 pt-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button size="lg" onClick={handleRequestAccess}>
+                  Request Access
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          <div className="lg:mt-0 mt-8">
+            <ChatDemo onRequestAccess={handleRequestAccess} />
+          </div>
+        </div>
+      </div>
+
+      <RequestDemoDialog open={isAccessOpen} onOpenChange={setIsAccessOpen} />
+    </section>
+  )
+}
+
