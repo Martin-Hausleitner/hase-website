@@ -124,7 +124,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
       id: "3",
     },
     {
-      sender: "FlirtFlow",
+      sender: "FlirtAgent",
       text: "Oh, you’ve got good taste! But I'm very picky about who gets to clap me like that. Show me what you’ve got babe. 😏",
       isPatrik: false,
       id: "4",
@@ -136,7 +136,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
       id: "5",
     },
     {
-      sender: "FlirtFlow",
+      sender: "FlirtAgent",
       text: "Now I’m really curious about what you can do, but don’t keep me waiting too long babe or I might just tease the patience out of you. 😈",
       isPatrik: false,
       id: "6",
@@ -148,7 +148,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
       id: "7",
     },
     {
-      sender: "FlirtFlow",
+      sender: "FlirtAgent",
       text: "Just finished a little workout to stay fit, but now I’m in the mood for something else. Should I show you which lingerie I am wearing today? 💋",
       isPatrik: false,
       id: "8",
@@ -160,7 +160,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
       id: "9",
     },
     {
-      sender: "FlirtFlow",
+      sender: "FlirtAgent",
       text: "Hmm, just for you I’ll make an exception today. But only because you’re begging so sweetly. 😏 Here’s your chance to see the hot lingerie set for your $7. And after that, I want to see just how much you like it. 😈",
       isPatrik: false,
       price: 7,
