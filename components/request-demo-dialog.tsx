@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useCallback, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -125,9 +125,9 @@ export default function RequestDemoDialog({ open, onOpenChange }: RequestDemoDia
               required
             />
           </div>
-          <Button type="submit" className="w-full">
+          <AnimatedButton type="submit" className="w-full">
             Request Access
-          </Button>
+          </AnimatedButton>
         </form>
         {showConfetti && (
           <ReactConfetti

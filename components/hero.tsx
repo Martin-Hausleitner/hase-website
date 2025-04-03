@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import { motion } from "framer-motion"
 import RequestDemoDialog from "@/components/request-demo-dialog"
 import ChatDemo from "@/components/chat-demo"
@@ -57,13 +57,13 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" onClick={handleRequestAccess}>
+                <AnimatedButton size="lg" onClick={handleRequestAccess}>
                   Request Access
-                </Button>
+                </AnimatedButton>
               </motion.div>
             </motion.div>
           </motion.div>
-
+          
           <div className="lg:mt-0 mt-8">
             <ChatDemo onRequestAccess={handleRequestAccess} />
           </div>

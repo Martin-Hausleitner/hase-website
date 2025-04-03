@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import { Menu, X } from "lucide-react"
 import LoginDialog from "@/components/login-dialog"
 import RequestDemoDialog from "@/components/request-demo-dialog"
@@ -88,13 +88,13 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Button variant="default" onClick={() => setIsLoginOpen(true)} className="hidden md:inline-flex">
+          <AnimatedButton variant="default" onClick={() => setIsLoginOpen(true)} className="hidden md:inline-flex">
             Login
-          </Button>
+          </AnimatedButton>
 
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
+          <AnimatedButton variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          </AnimatedButton>
         </div>
       </div>
       {/* Mobile Navigation */}
@@ -111,7 +111,7 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button
+            <AnimatedButton
               variant="default"
               onClick={() => {
                 setIsMenuOpen(false)
@@ -120,7 +120,7 @@ export default function Header() {
               className="w-full"
             >
               Login
-            </Button>
+            </AnimatedButton>
           </div>
         </div>
       )}

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import { motion } from "framer-motion"
 import RequestAccessDialog from "@/components/request-demo-dialog"
 
@@ -25,14 +25,14 @@ export default function Cta() {
             Take your online interactions to the next level with FlirtAgent's advanced AI capabilities.
           </p>
           <div className="mt-8">
-            <Button
+            <AnimatedButton
               size="lg"
               variant="default"
               onClick={() => setIsAccessOpen(true)}
               className="font-medium"
             >
               Request Access
-            </Button>
+            </AnimatedButton>
           </div>
         </motion.div>
       </div>

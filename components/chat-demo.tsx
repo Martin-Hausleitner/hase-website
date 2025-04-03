@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import Image from "next/image"
 
 interface Message {
@@ -197,12 +197,10 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
   return (
     <div className="w-full max-w-lg h-[600px] bg-transparent rounded-xl flex flex-col">
       <motion.div
-        className="flex-1 overflow-y-auto px-4 pt-4"
+        className="flex-1 overflow-y-auto px-4 pt-4 scrollbar-hide hover:scrollbar-show"
         ref={chatContainerRef}
         style={{
           height: "calc(100% - 80px)",
-          scrollbarWidth: "thin",
-          scrollbarColor: "rgba(200, 200, 200, 0.5) transparent",
         }}
       >
         <AnimatePresence mode="popLayout">
@@ -227,9 +225,9 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
           >
             Write a message...
           </div>
-          <Button size="icon" className="rounded-full" onClick={onRequestAccess}>
+          <AnimatedButton size="icon" className="rounded-full" onClick={onRequestAccess}>
             <Send className="h-4 w-4" />
-          </Button>
+          </AnimatedButton>
         </div>
       </div>
     </div>

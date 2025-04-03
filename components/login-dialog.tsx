@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { AnimatedButton } from "@/components/animated-button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -60,12 +60,11 @@ export default function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
               required
             />
           </div>
-          <Button type="submit" className="w-full">
+          <AnimatedButton type="submit" className="w-full">
             Sign In
-          </Button>
+          </AnimatedButton>
         </form>
       </DialogContent>
     </Dialog>
   )
 }
-
