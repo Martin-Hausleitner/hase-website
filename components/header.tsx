@@ -65,12 +65,11 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full bg-secondary text-secondary-foreground backdrop-blur supports-[backdrop-filter]:bg-secondary/95">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={(e) => handleScroll(e, "/")}>
-            <FlirtFlowLogo className="text-primary h-8 w-8" />
-            <span className="font-bold text-xl">FlirtAgent</span>
+            <img src="/light.svg" alt="FlirtAgent" className="h-8" />
           </Link>
         </div>
 
@@ -80,7 +79,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-primary text-secondary-foreground"
               onClick={(e) => handleScroll(e, link.href)}
             >
               {link.name}
@@ -100,13 +99,13 @@ export default function Header() {
       </div>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-secondary">
           <div className="container py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-sm font-medium transition-colors hover:text-primary"
+                className="block py-2 text-sm font-medium transition-colors hover:text-primary text-secondary-foreground"
                 onClick={(e) => handleScroll(e, link.href)}
               >
                 {link.name}

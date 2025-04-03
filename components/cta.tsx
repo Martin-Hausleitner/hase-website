@@ -9,7 +9,7 @@ export default function Cta() {
   const [isAccessOpen, setIsAccessOpen] = useState(false)
 
   return (
-    <section id="contact" className="py-20 bg-primary text-primary-foreground">
+    <section id="contact" className="py-20 bg-secondary text-secondary-foreground">
       <div className="container px-4 md:px-6 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,9 +27,9 @@ export default function Cta() {
           <div className="mt-8">
             <Button
               size="lg"
-              variant="secondary"
+              variant="default"
               onClick={() => setIsAccessOpen(true)}
-              className="text-primary font-medium"
+              className="font-medium"
             >
               Request Access
             </Button>
@@ -41,4 +41,3 @@ export default function Cta() {
     </section>
   )
 }
-

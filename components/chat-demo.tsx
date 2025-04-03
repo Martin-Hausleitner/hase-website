@@ -61,7 +61,7 @@ function MessageBubble({
           message.isPatrik ? "bg-primary text-primary-foreground rounded-br-sm" : "bg-muted rounded-bl-sm"
         }`}
       >
-        <div className="text-xs mb-1 font-semibold">{message.sender}</div>
+        <div className={`text-xs mb-1 font-semibold ${!message.isPatrik ? "text-black" : ""}`}>{message.sender}</div>
         {message.image && (
           <div className="mb-2">
             <div onClick={() => setIsImageBlurred(false)} className="cursor-pointer relative">
@@ -195,7 +195,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
   }, [messages])
 
   return (
-    <div className="w-full max-w-lg h-[600px] bg-background rounded-xl flex flex-col">
+    <div className="w-full max-w-lg h-[600px] bg-transparent rounded-xl flex flex-col">
       <motion.div
         className="flex-1 overflow-y-auto px-4 pt-4"
         ref={chatContainerRef}
@@ -222,7 +222,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
       <div className="p-4">
         <div className="flex gap-2">
           <div
-            className="flex-1 rounded-full px-4 py-2 border text-muted-foreground cursor-pointer hover:border-primary/50 transition-colors"
+            className="flex-1 rounded-full px-4 py-2 border border-white/20 text-white/70 bg-secondary/50 cursor-pointer hover:border-primary/50 transition-colors"
             onClick={onRequestAccess}
           >
             Write a message...
@@ -237,4 +237,3 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
 }
 
 export default ChatDemo
-

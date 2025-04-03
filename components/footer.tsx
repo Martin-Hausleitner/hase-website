@@ -11,14 +11,13 @@ export default function Footer() {
   const [isDemoOpen, setIsDemoOpen] = useState(false)
 
   return (
-    <footer className="bg-background border-t">
+    <footer className="bg-background text-foreground border-t">
       <div className="container py-12 md:py-16 px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left Column */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <FlirtFlowLogo className="text-primary h-8 w-8" />
-              <span className="font-bold text-xl">FlirtAgent</span>
+              <img src="/dark.svg" alt="FlirtAgent" className="h-8" />
             </Link>
             <p className="text-sm text-muted-foreground">
               Revolutionizing digital engagement through AI that drives real connections, fosters growth, and

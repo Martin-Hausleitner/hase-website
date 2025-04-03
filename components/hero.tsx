@@ -14,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <motion.div
@@ -28,7 +28,7 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.3 }}
             >
-              <Badge variant="secondary" className="mb-2 bg-muted/50 text-muted-foreground">
+              <Badge variant="outline" className="mb-2 bg-primary/20 text-white border-primary">
                 Alpha Release
               </Badge>
             </motion.div>
@@ -36,7 +36,7 @@ export default function Hero() {
               Fully Autonomous AI Agent That <span className="text-primary">Replaces Human Chatters</span>
             </h1>
             <motion.p
-              className="text-muted-foreground md:text-xl max-w-[600px]"
+              className="text-white/80 md:text-xl max-w-[600px]"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
@@ -74,4 +74,3 @@ export default function Hero() {
     </section>
   )
 }
-
