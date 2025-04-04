@@ -1,21 +1,48 @@
 {
-  "name": "FlirtAgent",
+  "name": "FlirtAgent - AI-Powered Chat Automation",
   "short_name": "FlirtAgent",
-  "description": "AI-Powered Chat Automation for Content Creators",
+  "description": "AI-Powered Chat Automation for Content Creators. Fully autonomous AI agent that replaces human chatters.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#6046C8",
+  "theme_color": "#6046C8",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/favicon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/favicon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#6046C8",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/"
+  "shortcuts": [
+    {
+      "name": "Request Access",
+      "short_name": "Access",
+      "description": "Request access to FlirtAgent",
+      "url": "/request-access",
+      "icons": [{ "src": "/favicon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Login",
+      "short_name": "Login",
+      "description": "Login to FlirtAgent dashboard",
+      "url": "/login",
+      "icons": [{ "src": "/favicon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["business", "ai", "productivity", "social"],
+  "screenshots": [
+    {
+      "src": "/Social Media.png",
+      "type": "image/png",
+      "sizes": "1200x630"
+    }
+  ]
 }

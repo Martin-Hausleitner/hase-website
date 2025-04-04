@@ -11,10 +11,13 @@ import StructuredData from "@/components/structured-data";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "FlirtAgent - AI-Powered Chat Automation for Content Creators",
+  metadataBase: new URL("https://flirtagent.ai"),
+  title: {
+    default: "FlirtAgent - AI-Powered Chat Automation for Content Creators",
+    template: "%s | FlirtAgent"
+  },
   description:
     "Fully autonomous AI agent that replaces human chatters. FlirtAgent manages all fan interactions, delivering flirty, revenue-boosting chats 24/7. Increase engagement and revenue with 24/7 AI chat automation.",
-  //   generator: "v0.dev",
   keywords: [
     "AI chat",
     "content creator",
@@ -26,6 +29,8 @@ export const metadata: Metadata = {
     "OnlyFans automation",
     "creator economy",
     "chat management",
+    "automated AI agent",
+    "content creator platform"
   ],
   authors: [{ name: "FlirtAgent Team" }],
   creator: "FlirtAgent",
@@ -35,19 +40,30 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
-  metadataBase: new URL("https://flirtagent.ai"),
   alternates: {
     canonical: "/",
+    languages: {
+      'en-US': '/en-US',
+    },
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://flirtagent.ai",
     title: "FlirtAgent - AI-Powered Chat Automation for Content Creators",
     description:
       "Fully autonomous AI agent that replaces human chatters. FlirtAgent manages all fan interactions, delivering flirty, revenue-boosting chats 24/7.",
-    url: "https://flirtagent.ai",
     siteName: "FlirtAgent",
     images: [
       {
@@ -57,8 +73,6 @@ export const metadata: Metadata = {
         alt: "FlirtAgent - AI-Powered Chat Automation",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -67,11 +81,12 @@ export const metadata: Metadata = {
       "Fully autonomous AI agent that replaces human chatters. FlirtAgent manages all fan interactions, delivering flirty, revenue-boosting chats 24/7.",
     images: ["/Social Media.png"],
     creator: "@flirtagent",
+    site: "@flirtagent",
   },
   viewport: {
     width: "device-width",
     initialScale: 1,
-    maximumScale: 1,
+    maximumScale: 5,
   },
   icons: {
     icon: [
@@ -88,6 +103,9 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   themeColor: "#6046C8",
+  verification: {
+    google: "google-site-verification=your_verification_code",
+  },
 };
 
 export default function RootLayout({

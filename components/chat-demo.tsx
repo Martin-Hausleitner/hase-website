@@ -71,7 +71,7 @@ function MessageBubble({
                     ? message.image
                     : "https://variety.com/wp-content/uploads/2021/07/Rick-Astley-Never-Gonna-Give-You-Up.png?w=1000&h=563&crop=1"
                 }
-                alt="Preview"
+                alt={`Preview image from ${message.sender}`}
                 width={200}
                 height={150}
                 className={`w-full h-36 object-cover rounded-lg ${isImageBlurred ? "blur-xl" : ""}`}
@@ -119,25 +119,25 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
     },
     {
       sender: "Patrik",
-      text: "I think your ass is amazing I’d love to clap it sometime.",
+      text: "I think your ass is amazing I'd love to clap it sometime.",
       isPatrik: true,
       id: "3",
     },
     {
       sender: "FlirtAgent",
-      text: "Oh, you’ve got good taste! But I'm very picky about who gets to clap me like that. Show me what you’ve got babe. 😏",
+      text: "Oh, you've got good taste! But I'm very picky about who gets to clap me like that. Show me what you've got babe. 😏",
       isPatrik: false,
       id: "4",
     },
     {
       sender: "Patrik",
-      text: "I’ve got a lot to offer, you’ll see as soon as I'm home.",
+      text: "I've got a lot to offer, you'll see as soon as I'm home.",
       isPatrik: true,
       id: "5",
     },
     {
       sender: "FlirtAgent",
-      text: "Now I’m really curious about what you can do, but don’t keep me waiting too long babe or I might just tease the patience out of you. 😈",
+      text: "Now I'm really curious about what you can do, but don't keep me waiting too long babe or I might just tease the patience out of you. 😈",
       isPatrik: false,
       id: "6",
     },
@@ -149,7 +149,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
     },
     {
       sender: "FlirtAgent",
-      text: "Just finished a little workout to stay fit, but now I’m in the mood for something else. Should I show you which lingerie I am wearing today? 💋",
+      text: "Just finished a little workout to stay fit, but now I'm in the mood for something else. Should I show you which lingerie I am wearing today? 💋",
       isPatrik: false,
       id: "8",
     },
@@ -161,7 +161,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
     },
     {
       sender: "FlirtAgent",
-      text: "Hmm, just for you I’ll make an exception today. But only because you’re begging so sweetly. 😏 Here’s your chance to see the hot lingerie set for your $7. And after that, I want to see just how much you like it. 😈",
+      text: "Hmm, just for you I'll make an exception today. But only because you're begging so sweetly. 😏 Here's your chance to see the hot lingerie set for your $7. And after that, I want to see just how much you like it. 😈",
       isPatrik: false,
       price: 7,
       image: "/placeholder.svg?height=150&width=200",
@@ -169,7 +169,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
     },
     {
       sender: "Patrik",
-      text: "Wow thank you! When I have more money next month I’ll check out everything from you. Thanks!",
+      text: "Wow thank you! When I have more money next month I'll check out everything from you. Thanks!",
       isPatrik: true,
       id: "11",
     },
@@ -196,13 +196,21 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
 
   return (
     <div className="w-full max-w-lg h-[600px] bg-transparent rounded-xl flex flex-col">
-      <motion.div
-        className="flex-1 overflow-y-auto px-4 pt-4 scrollbar-hide hover:scrollbar-show"
+      <div
+        className="relative flex-1 overflow-y-auto px-4 pt-4 scrollbar-hide hover:scrollbar-show"
         ref={chatContainerRef}
         style={{
           height: "calc(100% - 80px)",
         }}
       >
+        {/* Gradient fade overlay at the top */}
+        <div 
+          className="absolute top-0 left-0 right-0 h-16 pointer-events-none z-10"
+          style={{
+            background: "linear-gradient(to bottom, hsl(var(--secondary)) 0%, hsla(var(--secondary), 0.8) 40%, hsla(var(--secondary), 0) 100%)"
+          }}
+        />
+        
         <AnimatePresence mode="popLayout">
           <motion.div>
             {messages.map((message) => (
@@ -215,7 +223,7 @@ function ChatDemo({ onRequestAccess }: ChatDemoProps) {
             ))}
           </motion.div>
         </AnimatePresence>
-      </motion.div>
+      </div>
 
       <div className="p-4">
         <div className="flex gap-2">

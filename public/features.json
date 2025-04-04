@@ -1,0 +1,199 @@
+{
+  "features": [
+    {
+      "id": "automated",
+      "title": "100% Automated",
+      "icon": "Bot",
+      "description": "The agent operates and enhances its capabilities fully autonomously.",
+      "longDescription": "FlirtAgent runs entirely on its own, requiring no human intervention for daily operations. It continuously learns and improves from each interaction, becoming more effective over time. The AI autonomously handles conversations, manages media selection, and optimizes engagement strategies based on performance data.",
+      "benefits": [
+        "Zero manual monitoring needed",
+        "Self-improving conversation skills",
+        "Automatic performance optimization",
+        "24/7 availability without human oversight"
+      ],
+      "seoDescription": "FlirtAgent's 100% automated AI system manages all fan interactions without human intervention, operating 24/7 with continuous self-improvement capabilities.",
+      "seoKeywords": ["automated AI", "autonomous agent", "self-improving AI", "no human intervention"]
+    },
+    {
+      "id": "multi-model",
+      "title": "Multi-Model AI Agent",
+      "icon": "Brain",
+      "description": "Employs advanced reasoning along with vision, audio, and video models to handle diverse inputs.",
+      "longDescription": "FlirtAgent combines multiple specialized AI models into a single cohesive system. This multi-model approach enables it to understand and process various types of content - from text messages to images, videos, and audio clips. The agent can analyze emotional nuances in voice recordings, recognize objects and scenes in photos, and understand context in video clips.",
+      "benefits": [
+        "Comprehensive media understanding",
+        "Contextual responses to all content types",
+        "Advanced reasoning across modalities",
+        "Seamless integration of multiple AI capabilities"
+      ],
+      "seoDescription": "FlirtAgent integrates multiple AI models for comprehensive processing of text, images, videos, and audio, delivering context-aware responses across all media types.",
+      "seoKeywords": ["multi-model AI", "vision AI", "audio recognition", "video processing", "advanced reasoning"]
+    },
+    {
+      "id": "media-recognition",
+      "title": "Image, Video, and Audio Recognition",
+      "icon": "Camera",
+      "description": "Accurately detects and processes data from multiple media types.",
+      "longDescription": "FlirtAgent's advanced recognition systems can interpret content across all popular media formats. The AI identifies objects, scenes, people, emotions, and actions in images and videos. For audio, it recognizes speech, tones, music, and ambient sounds, enabling it to have context-aware conversations about any media a fan shares.",
+      "benefits": [
+        "Responds intelligently to shared media",
+        "Identifies content details in images and videos",
+        "Understands speech and sound in audio clips",
+        "Maintains contextual conversations about media"
+      ],
+      "seoDescription": "FlirtAgent features advanced recognition technology for images, videos, and audio, enabling intelligent, contextual conversations about any shared media.",
+      "seoKeywords": ["image recognition", "video detection", "audio processing", "media analysis", "content recognition"]
+    },
+    {
+      "id": "global-languages",
+      "title": "Over 100 Languages",
+      "icon": "Globe2",
+      "description": "Communicates fluently worldwide, expanding global reach.",
+      "longDescription": "FlirtAgent supports more than 100 languages with near-native fluency, allowing content creators to connect with fans from around the world. The AI understands cultural nuances, slang, and idioms specific to each language, ensuring authentic and natural conversations regardless of the language used. This capability dramatically expands a creator's potential audience and revenue streams.",
+      "benefits": [
+        "Connect with fans worldwide",
+        "Understand cultural nuances in each language",
+        "Expand to new international markets",
+        "Provide natural, fluent communication"
+      ],
+      "seoDescription": "FlirtAgent supports over 100 languages with cultural understanding and natural fluency, allowing content creators to engage with fans worldwide.",
+      "seoKeywords": ["multilingual AI", "language support", "global audience", "international reach", "cultural understanding"]
+    },
+    {
+      "id": "fine-tuning",
+      "title": "Fine-Tuning",
+      "icon": "Settings",
+      "description": "Easily customizable personality with various sales strategies.",
+      "longDescription": "FlirtAgent can be precisely tuned to match any desired personality, communication style, or sales approach. Creators can adjust parameters like flirtatiousness, assertiveness, humor, empathy, and selling strategy to create an AI that perfectly represents their brand. The system allows for ongoing adjustments based on performance data to optimize engagement and revenue.",
+      "benefits": [
+        "Create a unique AI personality that matches your brand",
+        "Adjust communication style to target specific audiences",
+        "Optimize sales strategies based on performance",
+        "Balance engagement and monetization effectively"
+      ],
+      "seoDescription": "FlirtAgent offers extensive fine-tuning capabilities to create custom AI personalities with tailored communication styles and optimized sales strategies.",
+      "seoKeywords": ["AI personality customization", "fine-tuning", "sales strategy optimization", "communication style", "brand matching"]
+    },
+    {
+      "id": "flirty-chatting",
+      "title": "Flirty Chatting",
+      "icon": "Heart",
+      "description": "Emotionally engaging and captivating conversational style.",
+      "longDescription": "FlirtAgent excels at creating emotionally engaging, flirtatious conversations that keep fans coming back for more. The AI strikes the perfect balance between being approachable, intriguing, and tantalizingly mysterious. It builds anticipation and connection through carefully crafted messages that create genuine emotional engagement while encouraging monetization in an organic, non-pushy manner.",
+      "benefits": [
+        "Create genuine emotional connections with fans",
+        "Maintain the perfect level of flirtatiousness",
+        "Increase fan retention through engaging conversations",
+        "Balance authentic connection with revenue generation"
+      ],
+      "seoDescription": "FlirtAgent creates emotionally engaging, flirtatious conversations that build genuine connections with fans while naturally encouraging monetization.",
+      "seoKeywords": ["flirty AI", "emotional engagement", "fan connection", "conversational AI", "relationship building"]
+    },
+    {
+      "id": "chat-history",
+      "title": "Complete Chat History",
+      "icon": "History",
+      "description": "Remembers every interaction alongside knowledge bases for optimal decision-making.",
+      "longDescription": "FlirtAgent maintains comprehensive records of all conversations, enabling true long-term relationships with fans. The AI remembers personal details, preferences, past interactions, and inside jokes, creating a sense of continuity and personal connection. This memory is paired with extensive knowledge bases that provide context and ensure every response is both personalized and informed.",
+      "benefits": [
+        "Build genuine long-term relationships with fans",
+        "Remember personal details and preferences",
+        "Reference past conversations naturally",
+        "Make informed decisions based on conversation history"
+      ],
+      "seoDescription": "FlirtAgent maintains complete conversation history, remembering personal details and preferences to build authentic long-term relationships with fans.",
+      "seoKeywords": ["chat memory", "conversation history", "long-term relationships", "personalized interaction", "fan retention"]
+    },
+    {
+      "id": "media-selection",
+      "title": "Media Selecting Agent",
+      "icon": "ImageIcon",
+      "description": "Automatically chooses the best media for fans.",
+      "longDescription": "FlirtAgent includes a specialized media selection system that analyzes your content library and chooses the perfect images, videos, or audio to share with each fan. The AI considers the conversation context, fan preferences, previous purchases, and optimal monetization strategies to select content that maximizes both fan satisfaction and revenue generation.",
+      "benefits": [
+        "Automatically select the most relevant media for each fan",
+        "Optimize content sharing for maximum revenue",
+        "Match media to conversation context naturally",
+        "Analyze performance to improve future selections"
+      ],
+      "seoDescription": "FlirtAgent's media selection system analyzes your content library to automatically choose the perfect images, videos, or audio to share with fans.",
+      "seoKeywords": ["media selection", "content recommendation", "automated curation", "personalized content", "media optimization"]
+    },
+    {
+      "id": "media-sync",
+      "title": "Media Sync Engine",
+      "icon": "RefreshCw",
+      "description": "Keeps all media perfectly synchronized.",
+      "longDescription": "FlirtAgent's media synchronization engine ensures that your content library remains perfectly organized and up-to-date across all platforms. The system automatically indexes new content, categorizes it based on AI analysis, and maintains consistency between your content management system and fan-facing platforms. This seamless integration ensures that the AI always has access to your latest content for sharing with fans.",
+      "benefits": [
+        "Automatic content indexing and categorization",
+        "Seamless integration with content management systems",
+        "Real-time updates across all platforms",
+        "Intelligent media tagging and organization"
+      ],
+      "seoDescription": "FlirtAgent's media synchronization engine automatically organizes and updates your content library across all platforms, ensuring seamless content management.",
+      "seoKeywords": ["media synchronization", "content organization", "automated indexing", "cross-platform integration", "content management"]
+    },
+    {
+      "id": "serverless",
+      "title": "Serverless Infrastructure",
+      "icon": "Server",
+      "description": "Fail-safe architecture with 99.99% uptime, scalable to millions of agents.",
+      "longDescription": "FlirtAgent runs on a state-of-the-art serverless infrastructure designed for maximum reliability and scalability. With 99.99% uptime guarantee, the system operates continuously with automatic failover and redundancy. The architecture can scale instantly from handling a handful of conversations to millions simultaneously, ensuring that your fans always receive prompt responses regardless of traffic volume.",
+      "benefits": [
+        "99.99% uptime guarantee",
+        "Instantaneous scaling to handle traffic spikes",
+        "Automatic redundancy and failover",
+        "Globally distributed for minimal latency"
+      ],
+      "seoDescription": "FlirtAgent utilizes serverless infrastructure with 99.99% uptime, providing reliable operation and instant scaling from a few to millions of simultaneous conversations.",
+      "seoKeywords": ["serverless architecture", "high availability", "scalable infrastructure", "cloud infrastructure", "reliable AI"]
+    },
+    {
+      "id": "api-interface",
+      "title": "API Interface",
+      "icon": "Code",
+      "description": "Fully integrated, end-to-end interface that can be embedded anywhere.",
+      "longDescription": "FlirtAgent offers comprehensive API access that allows for deep integration with your existing platforms and workflows. The flexible API enables embedding chat interfaces on any website or app, connecting to content management systems, integrating with payment processors, and accessing analytics data. This extensibility makes FlirtAgent adaptable to any business model or technical environment.",
+      "benefits": [
+        "Integrate with any existing platform or website",
+        "Connect to content management systems",
+        "Sync with payment processors and analytics",
+        "Create custom workflows and automations"
+      ],
+      "seoDescription": "FlirtAgent provides a comprehensive API for integration with any platform, enabling embedding in websites, connecting to CMS systems, and custom workflow creation.",
+      "seoKeywords": ["API integration", "platform connectivity", "embedded chat", "technical integration", "workflow automation"]
+    },
+    {
+      "id": "emotional-intelligence",
+      "title": "Emotional Intelligence",
+      "icon": "Brain",
+      "description": "Advanced emotional understanding for authentic conversations.",
+      "longDescription": "FlirtAgent features sophisticated emotional intelligence capabilities that allow it to recognize, understand, and appropriately respond to human emotions. The AI can detect subtle emotional cues in text, voice, and visual content, enabling it to adjust its tone and approach accordingly. This emotional awareness creates more authentic, empathetic conversations that feel genuinely human and build stronger connections with fans.",
+      "benefits": [
+        "Recognize emotional states from text and media",
+        "Respond with appropriate empathy and understanding",
+        "Adjust conversation tone based on emotional cues",
+        "Build authentic emotional connections with fans"
+      ],
+      "seoDescription": "FlirtAgent features advanced emotional intelligence to recognize and respond to human emotions, creating authentic and empathetic conversations with fans.",
+      "seoKeywords": ["emotional intelligence", "empathetic AI", "emotion recognition", "authentic conversation", "human-like interaction"]
+    },
+    {
+      "id": "jailbreak-safety",
+      "title": "AI Jailbreak Proof",
+      "icon": "Shield",
+      "description": "Never reveals it's an AI and remains secure.",
+      "longDescription": "FlirtAgent is designed with advanced security features that prevent it from ever revealing its AI nature or being 'jailbroken' by users. The system includes proprietary safeguards against common manipulation tactics and prompt injection attacks. These protections ensure that the AI maintains its character consistently, follows all configured guidelines, and can never be tricked into behaving inappropriately or revealing sensitive information.",
+      "benefits": [
+        "Protection against prompt injection attacks",
+        "Consistent character maintenance under all circumstances",
+        "Prevention of harmful or unauthorized behavior",
+        "Secure handling of sensitive information"
+      ],
+      "seoDescription": "FlirtAgent includes proprietary safeguards against manipulation tactics and prompt injection attacks, ensuring consistent character portrayal without revealing its AI nature.",
+      "seoKeywords": ["AI safety", "jailbreak protection", "secure AI", "manipulation prevention", "character consistency"]
+    }
+  ]
+}

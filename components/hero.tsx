@@ -1,20 +1,17 @@
 "use client"
+
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedButton } from "@/components/animated-button"
 import { motion } from "framer-motion"
-import RequestDemoDialog from "@/components/request-demo-dialog"
 import ChatDemo from "@/components/chat-demo"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import Head from "next/head"
 
 export default function Hero() {
-  const [isAccessOpen, setIsAccessOpen] = useState(false)
-
-  const handleRequestAccess = () => {
-    setIsAccessOpen(true)
-  }
-
   return (
-    <section id="hero" className="py-20 md:py-28 bg-secondary text-secondary-foreground">
+    <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <motion.div
@@ -29,7 +26,7 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.3 }}
             >
               <Badge variant="outline" className="mb-2 bg-primary/20 text-white border-primary">
-                Alpha Release
+                Early Access
               </Badge>
             </motion.div>
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl">
@@ -42,7 +39,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.5 }}
             >
               Say goodbye to human chatters. FlirtAgent autonomously manages all fan interactions, delivering flirty,
-              revenue-boosting chats 24/7.
+              revenue-boosting chats 24/7 with AI that feels completely human.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-3 pt-4"
@@ -57,20 +54,30 @@ export default function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <AnimatedButton size="lg" onClick={handleRequestAccess}>
-                  Request Access
-                </AnimatedButton>
+                <Link href="/request-access">
+                  <AnimatedButton size="lg">
+                    Request Access
+                  </AnimatedButton>
+                </Link>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.5 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                
               </motion.div>
             </motion.div>
           </motion.div>
           
           <div className="lg:mt-0 mt-8">
-            <ChatDemo onRequestAccess={handleRequestAccess} />
+            <ChatDemo onRequestAccess={() => window.location.href = '/request-access'} />
           </div>
         </div>
       </div>
-
-      <RequestDemoDialog open={isAccessOpen} onOpenChange={setIsAccessOpen} />
     </section>
   )
 }

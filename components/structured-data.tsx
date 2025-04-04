@@ -13,7 +13,13 @@ export default function StructuredData() {
       'https://facebook.com/flirtagent',
       'https://instagram.com/flirtagent',
       'https://linkedin.com/company/flirtagent'
-    ]
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'office@flirtagent.ai',
+      contactType: 'customer service',
+      availableLanguage: ['English', 'German', 'French', 'Spanish']
+    }
   };
 
   const websiteData = {
@@ -28,6 +34,35 @@ export default function StructuredData() {
     }
   };
 
+  const softwareApplicationData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'FlirtAgent',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/ComingSoon'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '87'
+    },
+    featureList: [
+      'AI Chat Automation',
+      'Multi-Model AI Agent',
+      'Media Recognition',
+      '100+ Languages Support',
+      'Flirty Chatting',
+      'Complete Chat History',
+      'Media Selecting Agent',
+      'API Interface'
+    ]
+  };
+
   return (
     <>
       <script
@@ -37,6 +72,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationData) }}
       />
     </>
   );

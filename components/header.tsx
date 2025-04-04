@@ -1,21 +1,18 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { AnimatedButton } from "@/components/animated-button"
 import { Menu, X } from "lucide-react"
-import LoginDialog from "@/components/login-dialog"
 import RequestDemoDialog from "@/components/request-demo-dialog"
 import FlirtFlowLogo from "@/components/flirtflow-logo"
+import Head from "next/head"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [isRequestDemoOpen, setIsRequestDemoOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -25,7 +22,7 @@ export default function Header() {
     { name: "Features", href: "#features" },
     { name: "Comparison", href: "#comparison" },
     { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ]
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -36,18 +33,24 @@ export default function Header() {
       setIsRequestDemoOpen(true)
     } else if (href === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" })
-    } else {
+    } else if (href === "/contact") {
+      router.push(href)
+    } else if (href.startsWith("#")) {
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
       }
+    } else {
+      router.push(href)
     }
 
     // Close mobile menu if open
     setIsMenuOpen(false)
 
     // Update URL without triggering a page reload
-    router.push(href, { scroll: false })
+    if (href.startsWith("#")) {
+      router.push(href, { scroll: false })
+    }
   }
 
   useEffect(() => {
@@ -65,32 +68,8 @@ export default function Header() {
     }
   }, [])
 
-  useEffect(() => {
-    const handleScrollEvent = () => {
-      // Get the hero section height to determine when to change header background
-      const heroSection = document.querySelector('#hero')
-      if (heroSection) {
-        const heroHeight = heroSection.getBoundingClientRect().height
-        setIsScrolled(window.scrollY > heroHeight - 80) // 80px buffer for header height
-      } else {
-        // If hero section not found, default to showing background after minimal scroll
-        setIsScrolled(window.scrollY > 100)
-      }
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScrollEvent)
-    // Initial check
-    handleScrollEvent()
-
-    // Cleanup
-    return () => window.removeEventListener('scroll', handleScrollEvent)
-  }, [])
-
   return (
-    <header className={`sticky top-0 z-50 w-full text-secondary-foreground transition-all duration-300 ${
-      isScrolled ? 'bg-secondary backdrop-blur supports-[backdrop-filter]:bg-secondary/95' : 'bg-transparent'
-    }`}>
+    <header className="sticky top-0 z-50 w-full bg-secondary text-secondary-foreground">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={(e) => handleScroll(e, "/")}>
@@ -113,9 +92,11 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <AnimatedButton variant="default" onClick={() => setIsLoginOpen(true)} className="hidden md:inline-flex">
-            Login
-          </AnimatedButton>
+          <Link href="/login">
+            <AnimatedButton variant="default" className="hidden md:inline-flex">
+              Login
+            </AnimatedButton>
+          </Link>
 
           <AnimatedButton variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -124,7 +105,7 @@ export default function Header() {
       </div>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className={`md:hidden ${isScrolled ? 'bg-secondary' : 'bg-secondary/90'}`}>
+        <div className="md:hidden bg-secondary">
           <div className="container py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -136,21 +117,21 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <AnimatedButton
-              variant="default"
-              onClick={() => {
-                setIsMenuOpen(false)
-                setIsLoginOpen(true)
-              }}
-              className="w-full"
-            >
-              Login
-            </AnimatedButton>
+            <Link href="/login">
+              <AnimatedButton
+                variant="default"
+                onClick={() => {
+                  setIsMenuOpen(false)
+                }}
+                className="w-full"
+              >
+                Login
+              </AnimatedButton>
+            </Link>
           </div>
         </div>
       )}
 
-      <LoginDialog open={isLoginOpen} onOpenChange={setIsLoginOpen} />
       <RequestDemoDialog open={isRequestDemoOpen} onOpenChange={setIsRequestDemoOpen} />
     </header>
   )
