@@ -69,7 +69,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={(e) => handleScroll(e, "/")}>
-            <img src="/light.svg" alt="FlirtAgent" className="h-8" />
+            <img src="/FlirtAgent Logo White.svg" alt="FlirtAgent" className="h-8" />
           </Link>
         </div>
 

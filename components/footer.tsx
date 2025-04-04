@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Left Column */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <img src="/dark.svg" alt="FlirtAgent" className="h-8" />
+              <img src="/FlirtAgent Logo Black.svg" alt="FlirtAgent" className="h-8" />
             </Link>
             <p className="text-sm text-muted-foreground">
               Revolutionizing digital engagement through AI that drives real connections, fosters growth, and
