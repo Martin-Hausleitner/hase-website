@@ -15,6 +15,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [isRequestDemoOpen, setIsRequestDemoOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const router = useRouter()
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -64,8 +65,32 @@ export default function Header() {
     }
   }, [])
 
+  useEffect(() => {
+    const handleScrollEvent = () => {
+      // Get the hero section height to determine when to change header background
+      const heroSection = document.querySelector('#hero')
+      if (heroSection) {
+        const heroHeight = heroSection.getBoundingClientRect().height
+        setIsScrolled(window.scrollY > heroHeight - 80) // 80px buffer for header height
+      } else {
+        // If hero section not found, default to showing background after minimal scroll
+        setIsScrolled(window.scrollY > 100)
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScrollEvent)
+    // Initial check
+    handleScrollEvent()
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScrollEvent)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-secondary text-secondary-foreground backdrop-blur supports-[backdrop-filter]:bg-secondary/95">
+    <header className={`sticky top-0 z-50 w-full text-secondary-foreground transition-all duration-300 ${
+      isScrolled ? 'bg-secondary backdrop-blur supports-[backdrop-filter]:bg-secondary/95' : 'bg-transparent'
+    }`}>
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2" onClick={(e) => handleScroll(e, "/")}>
@@ -99,7 +124,7 @@ export default function Header() {
       </div>
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-secondary">
+        <div className={`md:hidden ${isScrolled ? 'bg-secondary' : 'bg-secondary/90'}`}>
           <div className="container py-4 space-y-4">
             {navLinks.map((link) => (
               <Link

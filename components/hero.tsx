@@ -14,7 +14,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-secondary text-secondary-foreground">
+    <section id="hero" className="py-20 md:py-28 bg-secondary text-secondary-foreground">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <motion.div
