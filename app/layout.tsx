@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "FlirtAgent",
     images: [
       {
-        url: "/link-preview.png",
+        url: "/Social Media.png",
         width: 1200,
         height: 630,
         alt: "FlirtAgent - AI-Powered Chat Automation",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "FlirtAgent - AI-Powered Chat Automation",
     description:
       "Fully autonomous AI agent that replaces human chatters. FlirtAgent manages all fan interactions, delivering flirty, revenue-boosting chats 24/7.",
-    images: ["/link-preview.png"],
+    images: ["/Social Media.png"],
     creator: "@flirtagent",
   },
   viewport: {
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/iconlogo.svg", type: "image/svg+xml" },
+      { url: "/FlirtAgent Icon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     other: [

@@ -6,7 +6,7 @@ export default function StructuredData() {
     '@type': 'Organization',
     name: 'FlirtAgent',
     url: 'https://flirtagent.com',
-    logo: 'https://flirtagent.com/iconlogo.svg',
+    logo: 'https://flirtagent.com/FlirtAgent Icon.svg',
     description: 'Fully autonomous AI agent that replaces human chatters. FlirtAgent manages all fan interactions, delivering flirty, revenue-boosting chats 24/7.',
     sameAs: [
       'https://twitter.com/flirtagent',

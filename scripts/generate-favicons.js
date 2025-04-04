@@ -2,7 +2,8 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const INPUT_SVG = path.join(__dirname, '../public/iconlogo.svg');
+const INPUT_SVG = path.join(__dirname, '../public/FlirtAgent Icon.svg');
+const APPLE_SVG = path.join(__dirname, '../public/Apple Favicon.svg');
 const OUTPUT_DIR = path.join(__dirname, '../public');
 
 // Ensure the output directory exists
@@ -16,8 +17,9 @@ const sizes = [16, 32, 192, 512];
 // Generate PNG favicons
 async function generatePNGFavicons() {
   try {
-    // Read the SVG file
+    // Read the SVG files
     const svgBuffer = fs.readFileSync(INPUT_SVG);
+    const appleSvgBuffer = fs.readFileSync(APPLE_SVG);
 
     // Generate PNG favicons for each size
     for (const size of sizes) {
@@ -29,8 +31,8 @@ async function generatePNGFavicons() {
       console.log(`Generated favicon-${size}x${size}.png`);
     }
 
-    // Generate Apple Touch Icon (180x180)
-    await sharp(svgBuffer)
+    // Generate Apple Touch Icon (180x180) using the Apple-specific favicon
+    await sharp(appleSvgBuffer)
       .resize(180, 180)
       .png()
       .toFile(path.join(OUTPUT_DIR, 'apple-touch-icon.png'));
